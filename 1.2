@@ -1,0 +1,20 @@
+input.onButtonPressed(Button.A, function () {
+    radio.sendString(".")
+    basic.pause(1000)
+    radio.sendString("")
+})
+input.onButtonPressed(Button.AB, function () {
+    radio.sendString("/")
+    basic.pause(200)
+    radio.sendString("")
+})
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("-")
+    basic.pause(1000)
+    radio.sendString("")
+})
+radio.setGroup(69)
+radio.sendString("ON")
